@@ -1,0 +1,100 @@
+body {
+  background: url('../images/background1.png') no-repeat center center fixed;
+  background-size: cover;
+  animation: backgroundCycle 15s infinite;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+@keyframes backgroundCycle {
+  0% { background-image: url('../images/background1.png'); }
+  33% { background-image: url('../images/background2.png'); }
+  66% { background-image: url('../images/background3.png'); }
+  100% { background-image: url('../images/background1.png'); }
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #ff00ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #cc00cc;
+}
+.stats {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 15px;
+  width: 540px;
+  margin: 20px auto;
+}
+.card {
+  height: 120px;
+  background: #330066;
+  border: 2px solid #6600cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  box-shadow: 0 0 10px #ff00ff;
+}
+.card.visible {
+  transform: rotateY(180deg);
+  background: #6600cc;
+}
+.card img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+#nftEffect {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(#ff00ff, transparent);
+  border-radius: 50%;
+  opacity: 0;
+  animation: nftGlow 1s ease-out;
+}
+@keyframes nftGlow {
+  0% { opacity: 1; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(2.5); }
+}
+.leaderboard {
+  margin-top: 20px;
+}
+.leaderboard h2 {
+  color: #ff00ff;
+}
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+.leaderboard li {
+  background: #330066;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}

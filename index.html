@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monad Cosmic Memory</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monad Cosmic Memory</h1>
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
+        <button id="connectWallet">Connect Wallet</button>
+        <button id="startGame" style="display:none;">Start</button>
+        <button id="resetGame" style="display:none;">Reset</button>
+        <button id="toggleMusic">Toggle Music</button>
+        <p id="status"></p>
+        <div class="stats">
+            <span>Time: </span><span id="timer">0</span>
+            <span>Score: </span><span id="score">0</span>
+        </div>
+        <div id="cards" class="cards"></div>
+        <div id="nftEffect"></div>
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList"></ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
